@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "Fname": "Ghassen",
+      "lname": "Mansouri",
+      "email": "ghassenmansouri@mail.comdsf",
+      "birthday": "2345-05-05",
+      "id": 1
+    },
+    {
+      "Fname": "Ghassen",
+      "lname": "Mansouri",
+      "email": "ghassenmansouri@mail.comdsf",
+      "birthday": "2345-05-05",
+      "id": 2
+    },
+    {
+      "Fname": "Ghassen",
+      "lname": "Mansouri",
+      "email": "ghassenmansouri@mail.comdsf",
+      "birthday": "2345-05-05",
+      "id": 3
+    },
+    {
+      "Fname": "Ghassen",
+      "lname": "Mansouri",
+      "email": "ghassenmansouri@mail.comdsf",
+      "birthday": "2345-05-05",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "title": "",
+      "price": "",
+      "image": "",
+      "id": "1"
+    }
+   
+   
+  ],
+  "user":[
+    {"id":22,
+    "email":"ghassen@gmail.com",
+    "password":"ghassen123"
+    }
+  ]
+}

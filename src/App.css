@@ -1,0 +1,245 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+.content{
+  margin-top: 1.9rem;
+  z-index: 999;
+  
+}
+h1{
+  font-size: 24px;
+}
+p{
+
+  font-size: 20px;
+}
+.Insctructor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin:50px;
+  
+  
+}
+.Yass{
+  width: 35%;
+  height: 35%;
+  padding:10px;
+  margin:20px;
+  border-radius: 50%;
+}
+
+
+.card {
+  
+  display: flex;
+  background: #191c2969;
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  border-radius: 6px;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+  margin:15px;
+  padding:10px;
+ 
+}
+a:hover{
+  color: white;
+}
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+    
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none !important;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+.btnSec{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding-bottom: .5rem;
+  margin-top: -1rem;
+}
+img{
+  border-radius: 6px;
+}
+.delete{
+  background-color: #5ddcff ;
+  border: 1px solid #5ddcff;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+header{
+  background-color:rgba(0, 0, 255, 0.655);
+  width: 100%;
+  height: 60px;
+}
+.logo .mylogo{
+  font-size: 35px;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 20px;
+
+ 
+ 
+}
+nav{
+  margin-left: 1rem;
+  margin-top: -1.5rem;
+  display: flex;
+  text-decoration: none;
+}
+nav .nav-link{
+  color: rgb(255, 255, 255);
+  padding: 0 11px;
+ 
+}
+.nav-link:hover{
+  
+  color: white;
+ 
+ 
+}
+
+.ContactContent{
+  margin: 20px;
+  padding: 15px;
+  font-style: oblique;
+}
+/*for tablets */
+@media screen and (min-width: 490px){
+  header{
+      width: 100%;
+  }
+  .logo .mylogo{
+      font-size: 38px;
+      margin-left: 9.5rem;
+  }
+  nav{
+      margin-left: 4rem;
+  }
+  nav .nav-link{
+      padding: 0 30px;
+  }
+}
+/*for pc small screen */
+@media screen and (min-width: 720px){
+  header{
+      width: 100%;
+      position: relative;
+  }
+  .logo .mylogo{
+    font-size: 30px;
+    margin-left:1rem;
+    position: relative;
+    top: 20px;
+  }
+  nav{
+      margin-right: 3rem;
+      float: right;
+      line-height: 2px;
+  }
+  nav .nav-link{
+      padding: 10px 30px;
+  }
+}
+/*for pc large screen*/
+@media screen and (min-width: 1200px){
+  header{
+      width: 100%;
+      position: relative;
+  }
+  .logo .mylogo{
+      font-size: 30px;
+      margin-left:5rem;
+      position: relative;
+      top: 29px;
+  }
+  nav{
+      margin-right: 5rem;
+      float: right;
+      margin-bottom: 35px;
+  }
+  nav .nav-link{
+      padding: 10px 0px;
+      margin: 0 40px;
+      font-size: 20px;
+  }
+}
